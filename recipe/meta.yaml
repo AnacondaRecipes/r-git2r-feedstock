@@ -39,14 +39,10 @@ requirements:
     - {{posix}}automake
     - {{posix}}pkg-config
     - {{posix}}make
-    - {{native}}openssl
-    - {{native}}zlib
 
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
-    - {{native}}openssl
-    - {{native}}zlib
 
 test:
   commands:
