@@ -1,4 +1,4 @@
-{% set version = '0.19.0' %}
+{% set version = '0.20.0' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/git2r_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/git2r/git2r_{{ version }}.tar.gz
-  sha256: 380121c31dfb53f3417f9014e841a3b0ff8889f896375295984ea9daec724673
+  sha256: 86a0ffd6734f61d0720f3176e286d1231c3da4e3afe42b182b8b2abd657c0fdf
 
 
   # patches:
@@ -35,6 +35,8 @@ requirements:
     - {{ compiler('c') }}        # [not win]
     - {{native}}toolchain        # [win]
     - {{posix}}filesystem        # [win]
+    - {{posix}}sed               # [win]
+    - {{posix}}grep              # [win]
     - {{posix}}autoconf
     - {{posix}}automake-wrapper  # [win]
     - {{posix}}automake          # [not win]
@@ -77,7 +79,7 @@ extra:
 # Package: git2r
 # Title: Provides Access to Git Repositories
 # Description: Interface to the 'libgit2' library, which is a pure C implementation of the 'Git' core methods. Provides access to 'Git' repositories to extract data and running some basic 'Git' commands.
-# Version: 0.19.0
+# Version: 0.20.0
 # License: GPL-2
 # Copyright: See COPYRIGHTS file.
 # URL: https://github.com/ropensci/git2r
@@ -94,9 +96,9 @@ extra:
 # SystemRequirements: zlib headers and library. OpenSSL headers and library. LibSSH2 (optional on non-Windows) to enable the SSH transport.
 # Collate: 'S4_classes.r' 'blame.r' 'blob.r' 'branch.r' 'bundle_r_package.r' 'checkout.r' 'commit.r' 'config.r' 'contributions.r' 'credential.r' 'diff.r' 'fetch.r' 'git2r.r' 'index.r' 'libgit2.r' 'merge.r' 'note.r' 'odb.r' 'plot.r' 'pull.r' 'punch_card.r' 'refspec.r' 'push.r' 'reference.r' 'reflog.r' 'remote.r' 'repository.r' 'reset.r' 'revparse.r' 'signature.r' 'stash.r' 'status.r' 'tag.r' 'time.r' 'tree.r' 'when.r'
 # RoxygenNote: 6.0.1
-# Packaged: 2017-07-19 09:49:20 UTC; stefan
+# Packaged: 2017-12-17 19:25:41 UTC; stefan
 # Repository: CRAN
-# Date/Publication: 2017-07-19 21:48:49 UTC
+# Date/Publication: 2017-12-17 22:56:21 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
