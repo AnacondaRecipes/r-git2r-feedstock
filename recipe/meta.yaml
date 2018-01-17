@@ -46,10 +46,19 @@ requirements:
 
   host:
     - r-base
+    - {{native}}libssh2 1.*      # [not win]
+    - {{native}}zlib 1.2.8       # [win]
+    - {{native}}zlib             # [not win]
+    - {{native}}openssl
+    - {{native}}curl
 
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
+    - {{native}}libssh2 1.*      # [not win]
+    - {{native}}zlib 1.2.8       # [win]
+    - {{native}}openssl          # [win]
+    - {{native}}curl
 
 test:
   commands:
