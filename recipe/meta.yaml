@@ -10,8 +10,8 @@ package:
 source:
   fn: git2r_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/git2r_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/git2r/git2r_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/git2r_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/git2r/git2r_{{ version }}.tar.gz
   sha256: 86a0ffd6734f61d0720f3176e286d1231c3da4e3afe42b182b8b2abd657c0fdf
 
 
