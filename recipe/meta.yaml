@@ -50,7 +50,8 @@ requirements:
     - {{native}}zlib 1.2.8       # [win]
     - {{native}}zlib             # [not win]
     - {{native}}openssl
-    - {{native}}curl
+    - {{native}}curl             # [win]
+    - {{native}}libcurl          # [not win]
 
   run:
     - r-base
@@ -58,7 +59,8 @@ requirements:
     - {{native}}libssh2 1.*      # [not win]
     - {{native}}zlib 1.2.8       # [win]
     - {{native}}openssl          # [win]
-    - {{native}}curl
+    - {{native}}curl             # [win]
+    - {{native}}libcurl          # [not win]
 
 test:
   commands:
