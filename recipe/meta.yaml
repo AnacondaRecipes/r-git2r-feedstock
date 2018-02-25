@@ -52,6 +52,7 @@ requirements:
     - {{native}}openssl
     - {{native}}curl             # [win]
     - {{native}}libcurl          # [not win]
+    - {{native}}libiconv         # [osx]
 
   run:
     - r-base
