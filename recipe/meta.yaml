@@ -41,10 +41,16 @@ requirements:
 
   host:
     - r-base
+    - libssh2
+    - openssl
+    - zlib
 
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
+    - libssh2
+    - openssl
+    - zlib
 
 test:
   commands:
